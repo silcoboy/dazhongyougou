@@ -1,0 +1,14 @@
+<view class="containers">
+<!-- <image class="backgoundimg" src="../../img/Login.jpg"></image> -->
+<view class="container-content">
+<image class="icon" src="../../img/shopping-car-K.png"></image>
+<view class="t1">大众优购</view>
+<view class="t2">一家有温度的社区电商</view>
+<button class="loginbtn" catchtap='getUserProfile'>微信授权登录</button>
+<!-- <button class="loginbtn" bindgetuserinfo='getinfoFunc' open-type='getUserInfo'>微信授权登录</button> -->
+<button class="cancelbtn" catchtap='gettourist'>取消</button>
+<view class="choice-agreement">
+<van-checkbox value="{{ checked }}" class="choice" checked-color="#FF6509" icon-size="30rpx" bind:change="onChange"></van-checkbox><view class="agree">我已阅读并同意<text class="agreementtext">《大众优购用户协议》《大众优购隐私政策》</text></view>
+</view>
+</view>
+</view>

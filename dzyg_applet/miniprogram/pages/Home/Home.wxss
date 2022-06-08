@@ -1,0 +1,254 @@
+.swiper {
+  height: 330rpx;
+ 
+  
+ }
+ .swiper-item{
+  width: 100%;
+  height: 100%;
+ }
+ .image-item{
+  width: 100%;
+  height: 100%;
+ }
+/* 分类导航 */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  margin: 8px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+  border-bottom: 1rpx solid #efefef;
+  
+}
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx;
+  align-items: center;
+}
+.nav-img {
+  width: 100rpx;
+  height: 90rpx;
+}
+.nav-name{
+  font-size: 12px;
+  
+}
+
+
+
+
+
+/* 返回顶部 */
+.backTop{
+  position: fixed;
+  right: 50rpx;
+  bottom: 200rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.backTop image{
+  opacity: 1;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 12rpx;
+}
+
+.back{
+  opacity:1;
+  margin-top:-15rpx;
+  color:#fff;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:20rpx;
+}
+
+/* 秒杀特卖 */
+.seckillbox {
+  border-radius: 25rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  width:90%;
+  padding-bottom: 20rpx;
+}
+.seckillboxtitle{
+  display: flex;
+  justify-content: space-between;
+}
+.seckilltitle {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 45rpx;
+  font-weight: 800;
+}
+.morecommodity{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 14px;
+  width: 80px;
+  color: #fff;
+  text-align: center;
+  margin-top: 28rpx;
+  background-color: #FEA144;
+  border-radius: 20rpx;
+
+}
+.seckillitem {
+  font-size: 28rpx;
+  height: 320rpx;
+  line-height: 320rpx;
+  margin-left: 8px;
+}
+.seckillswiper-item{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.seckillcommodity{
+  width: 105px;
+  height: 105px;
+  margin-bottom: 8px;
+}
+.commodityprice{
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  font-size:30rpx;
+   color:#ED5F53;
+   font-weight:600;
+}
+.addcart{
+  background-color: #C00000;
+  border-radius: 25rpx;
+  width: 90px;
+  font-weight: 900;
+  height: 35px;
+  line-height: 29px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 8px;
+}
+/* 广告 */
+.advertisementbox {
+  border-radius: 25rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width:98%;
+}
+.advertisement {
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 23px;
+  line-height: 100rpx;
+  background: -webkit-linear-gradient(left top, #FA7846,#DF2617);
+  color: #fff;
+  border-radius: 20rpx;
+  width: 100%;
+  font-weight: 800;
+}
+
+/* 今日推荐 */
+.recommendationbox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+.recommendationitem{
+ display: flex;
+ flex-direction: column;
+ width: 47%;
+ height: 283px;
+ background-color:#fff;
+ margin-top: 10px;
+ font-size: 28rpx;
+ border-radius: 20rpx;
+}
+/* 滚动 */
+.scroll-container{
+  display: flex; 
+}
+/* 今日推荐 */
+.productpicture{
+  /* width: 170px; */
+  width: 100%;
+  height: 180px;
+  border-radius: 25rpx 25rpx 0rpx 0rpx;
+}
+.describe{
+  font-size: 30rpx;
+  width:100%;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space:overflow;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.priceitem{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.price{
+  font-size: 36rpx;
+  color: #ED5F53;
+  font-weight: 600;
+  padding-right: 10rpx;
+}
+.addcarts{
+  background-color: #C00000;
+  border-radius: 25rpx;
+  width: 90px;
+  font-weight: 800;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.remainder-item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 7rpx;
+  padding-right: 8rpx;
+}
+.product-beife{
+  font-size: 24rpx;
+  color: #808080;
+  border: 1rpx solid #808080;
+  border-radius: 10rpx;
+  padding: 2rpx 10rpx;
+}
+.product-num{
+  color: #808080;
+  padding: 2rpx 10rpx;
+  border: 1rpx solid #808080;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  height: 15px;
+  line-height: 15px;
+
+}

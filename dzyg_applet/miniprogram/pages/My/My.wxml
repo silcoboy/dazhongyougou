@@ -1,0 +1,125 @@
+
+<view style='height:100%;{{overflow}}'>
+<view class='top-box'>
+<block wx:if="{{nickname==''}}">
+<view class='my-message-box'>
+  <image class='avatar' src='../../img/my/touxiang.png'></image>
+  <view class='my-name-box'>
+      <!-- <view class="nickName" >{{userInfo.nickName}}</view> -->
+      <button class="Loginbtn" bindtap="gotoLogin" >点击登录</button>
+    </view>
+</view>
+</block>
+<block wx:if="{{nickname!=''}}">
+  <view class='my-message-box'>
+    <!-- <image class='avatar' src='{{userInfo.avatarUrl}}'></image> -->
+    <block wx:if="{{headImg==''}}">
+    <image class='avatar' src='../../img/my/touxiang.png'></image>
+  </block>
+  <block wx:if="{{headImg!=''}}">
+    <image class='avatar' src='{{headImg}}'></image>
+  </block>
+    <view class='my-name-box'>
+      <!-- <view class="nickName" >{{userInfo.nickName}}</view> -->
+      <view class="nickName" >{{nickname}}</view>
+    </view>
+  </view>
+</block>
+
+
+  <!-- 我的松子 -->
+  <view class='my-songzi-box'>
+    <view class='my-songzi'>我的松子:0</view>
+    <view class='conditions'>消费满20元可用>></view>
+    <view class='history'>松子明细</view>
+  </view>
+
+</view>
+
+
+<view class='order-box'>
+  <view class='order-title'>
+    <view style='margin-left:30rpx;'>我的订单</view>
+    <view style='position: absolute;right:30rpx;color:#bbb;font-size:28rpx;' catchtap='OrderItem' id='0'>查看全部订单></view>
+  </view>
+  <view class='order-state'>
+    <view class='order-state-item' catchtap='OrderItem' id='1'>
+      <image class='state-img' src='../../img/my/fk.png'></image>
+      <view class='state'>待付款</view>
+    </view>
+
+    <view class='order-state-item' catchtap='OrderItem' id='2'>
+      <image class='state-img' src='../../img/my/fh.png'></image>
+      <view class='state'>待配送</view>
+    </view>
+
+    <view class='order-state-item' catchtap='OrderItem' id='3'>
+      <image class='state-img' src='../../img/my/dth.png'></image>
+      <view class='state'>待提货</view>
+    </view>
+
+    <view class='order-state-item' catchtap='OrderItem' id='4'>
+      <image class='state-imgs' src='../../img/my/yth.png'></image>
+      <view class='state'>已提货</view>
+    </view>
+
+    <view class='order-state-item' catchtap='AfterSale'>
+      <image class='state-img' src='../../img/my/th.png'></image>
+      <view class='state'>售后</view>
+    </view>
+
+  </view>
+</view>
+
+
+<!-- 自提点地址 -->
+<view class='tihuoma' bindtap="handleChooseAddress">
+  <image class='erweima'></image>
+  <view class="code-boxs">
+      <view class="store">自提点：{{Address.storeName}}</view>
+      <view class="merchant">团长：{{Address.linkName}}</view>
+    <view class="telephone">手机号码：{{Address.storePhone}}</view>
+    <view class="address">提货地点：{{Address.storeAddress}}</view>
+  </view>
+</view>
+<!-- 我的服务 -->
+<!-- <view class='order-boxs'>
+  <view class='order-titles'>
+    <view style='margin-left:30rpx;'>更多服务</view>
+  </view>
+  <view class='order-state'>
+    <view class='order-state-item' >
+      <image class='state-imgs' src='../../img/my/gonggao.png'></image>
+      <view class='state'>公告</view>
+    </view>
+
+    <view class='order-state-item' >
+      <image class='state-imgs' src='../../img/my/haibao.png'></image>
+      <view class='state'>推广海报</view>
+    </view>
+
+    <view class='order-state-item' >
+      <image class='state-imgs' src='../../img/my/fankuijianyi.png'></image>
+      <view class='state'>反馈建议</view>
+    </view>
+
+    <view class='order-state-item' >
+      <image class='state-imgs' src='../../img/my/lianxiwomen.png'></image>
+      <view class='state'>联系我们</view>
+    </view>
+
+    <view class='order-state-item' >
+      <image class='state-imgs' src='../../img/my/guanyuwomen.png'></image>
+      <view class='state'>关于我们</view>
+    </view>
+    
+
+    
+
+
+  </view>
+</view> -->
+
+</view>
+
+
