@@ -1,0 +1,78 @@
+
+/* 右侧的滚动视图区域 */
+.right-scroll-view{
+  display: flex;
+  width: 78%;
+  }
+  .right-item{
+  border-bottom: 3px solid #efefef;
+  }
+  .right-view{
+    display: flex;
+    height: 120px;
+  }
+  /* 商品样式 */
+  .product-minbox{
+    background: #f1f1f1;
+    width: 100%;
+  }
+  .product-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #f1f1f1;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 3rpx;
+  }
+  .product-box .product-img{
+    width: 200rpx;
+    height: 200rpx;
+    display: block;
+    margin: auto;
+    padding: 10rpx 10rpx;
+  }
+  .product-box .product-jsbox{
+    padding: 44rpx 44rpx 44rpx 0rpx;
+    width: 60%;
+  }
+  .product-box .product-jsbox .product-name{
+    font-size: 30rpx;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  .product-box .product-jsbox .product-beife{
+    font-size: 24rpx;
+    color: #666;
+  }
+  .product-box .product-jsbox .product-num{
+    color: #666;
+    padding: 2rpx 10rpx;
+    border: 1rpx solid #666;
+    border-radius: 20rpx;
+    font-size: 20rpx;
+  }
+  .product-box .product-jsbox .price-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30rpx;
+  }
+  .product-box .product-jsbox .price-box .t1{
+    color: red;
+    font-size: 34rpx;
+    font-weight: 600;
+  }
+  .product-box .product-jsbox .price-box .t2{
+    color: #666;
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    text-decoration: line-through;
+  }
+  .product-box .product-jsbox .price-box .index-shopping-car{
+    width: 60rpx;
+    height: 60rpx;
+  }

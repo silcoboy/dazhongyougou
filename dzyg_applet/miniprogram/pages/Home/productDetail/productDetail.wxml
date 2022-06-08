@@ -1,0 +1,148 @@
+<view class='top-box'>
+  <swiper >
+    <swiper-item   wx:for="{{detailsList.picUrl}}" wx:key="index">
+    <view style='height:550rpx;width:100%;'>
+      <image style='height:550rpx;width:100%;' src="{{item}}" bindtap="previewImage" data-index="{{index}}"></image>
+    </view>
+    </swiper-item>
+  </swiper>
+
+  <view class='commodity-value-box'>
+    <!-- 价格盒子 -->
+    <view class='value-box'>
+      <view style='font-size:28rpx;height:60rpx;'>￥
+        <text style='font-size:50rpx;'>{{detailsList.price}}</text></view>
+      <view style='font-size:20rpx;height:40rpx;'>市场价
+        <text style='text-decoration:line-through;'>￥{{detailsList.oldPrice}}</text>
+      </view>
+    </view>
+    <!-- 倒计时盒子 -->
+    <view class='time-box'>
+      <view class='box2'>
+        <view>{{detailsList.resume}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='commodity-message'>
+  <!-- 产品 -->
+  <view class='commodity-message-top'>
+    <view class='message-box'>
+      <view class='commodity-name'>{{detailsList.name}}</view>
+      <view class='commodity-sales'>剩余
+        <text style='color:#FE4C4C;'>{{detailsList.curNum}}</text>件，累计销售{{detailsList.totalBuyNum}}件</view>
+    </view>
+    <!-- 分享 -->
+    <view class='share'>
+      <image src='../../../img/home/fenxiang.png'></image>
+      <view style='font-size:20rpx; text-align:center; color:#6a5e5c;'>分享</view>
+    </view>
+  </view>
+
+  <view class='commodity-message-bottom'>
+    <!-- <image></image> -->
+    <text style='color: #6a5e5c;'>现在下单,预计在明天下午可自提</text>
+  </view>
+</view>
+
+<!-- 自提点选择 -->
+<!-- <view class='evaluate-box box-common'>
+  <view class='box-title'>选择自提点</view>
+  <view class='evaluate'>
+    自提点信息
+  </view>
+</view> -->
+
+<!-- 商品评价 -->
+<!-- <view class='evaluate-box box-common'>
+  <view class='box-title'>商品评价
+    <text style='font-size:28rpx;color:#bbb;font-weight:500;'>(10)</text>
+  </view>
+  <view class='evaluate'>
+    很好
+  </view>
+  <view class='look'>查看全部评论</view>
+</view> -->
+
+
+<!-- 购买记录 -->
+<!-- <view class='box-common'>
+  <view class='box-title'>购买记录
+    <view class='buy-person-message'>已有
+      <text style='color:#FE4C4C;font-weight:600;'>11661</text>人购买，商品共销售
+      <text style='color:#FE4C4C;font-weight:600;'>14053</text>份
+      <image src='../../../img/home/right-icon.png'></image>
+    </view>
+  </view>
+
+  <view class='buy-person'>
+    <block wx:for='{{img}}'>
+      <image src='https://wx.qlogo.cn/mmopen/vi_32/2sIWszrCrWKGUdeIx1EdZ2p7rlu4cay46EKNPuJLFgrTvxz6A7yRlFeOQEiaicC9a2OztfAdicJZicRwmtBu1cMstw/132'></image>
+    </block>
+  </view>
+</view> -->
+
+
+<!-- 邻居都在买 -->
+<!-- <view class='box-common'>
+  <view class='title'>邻居都在买</view>
+  <view class='other-commoditys-box'>
+    <block wx:for='{{other}}' wx:key='{{index}}'>
+      <view class='commodity-item'>
+        <image></image>
+        <view class='commodity-item-name'>{{item.name}}</view>
+        <view class='commodity-value'>￥{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+</view> -->
+
+<!-- 销售产地 -->
+<view class='box-common'>
+  <view class='box-title'>销售产地</view>
+  <view class='buy-person'>
+   <view><text>销售商：</text>五星七蔬菜</view>
+   <view><text >产</text><text class="local">地：</text>{{detailsList.address}}</view>
+   <view><text>规</text><text class="Specifications">格：</text>2.5kg±100g</view>
+  </view>
+
+</view>
+
+<!-- 商品详情 -->
+<view  class="detailcontainer">
+  <image src="../../../img/home/product-detail.jpg" class='detail-img'></image>
+  <view wx:for="{{detailsList.imgs}}" wx:key="index">
+  <image class="detailList" src="{{item}}" bindtap="previewImages" data-index="{{index}}"></image>
+  </view>
+</view>
+
+
+<view class='Topbar' wx:if='{{backTop}}'>
+  <view class='bar-box'>
+    <view class="bar-item {{baritem == 0?'active':''}}">商品</view>
+    <view class="bar-item {{baritem == 1?'active':''}}">自提点</view>
+    <view class="bar-item {{baritem == 2?'active':''}}">产地</view>
+    <view class="bar-item {{baritem == 3?'active':''}}">详情</view>
+  </view>
+</view>
+
+<view class='backTop' wx:if='{{backTop}}' catchtap='goTop'>
+  <image src='../../../img/home/top.png'></image>
+  <view class='back'>回顶部</view>
+</view>
+
+
+
+
+<!-- 底部组件 -->
+<van-goods-action>
+  <van-goods-action-icon icon="wap-home-o" text="首页" bind:click="onClickHome" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCart"  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="AddCart"
+  />
+  <van-goods-action-button text="立即购买" bind:click="Bynow" />
+</van-goods-action>

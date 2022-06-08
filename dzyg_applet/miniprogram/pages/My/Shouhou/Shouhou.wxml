@@ -1,0 +1,89 @@
+<view wx:if="{{!network500}}" catchtouchmove='{{stopPageScroll}}' style='height:{{swiperheight}}rpx;'>
+  <view class='nav'>
+    <block wx:for='{{navList}}' wx:key='{{index}}'>
+      <view class='{{item.Style}} nav-item every' catchtap='navtap'  id='{{index}}' data-type="{{item.id}}">{{item.name}}</view>
+    </block>
+    <view class='navborder' style='left:{{left}}; width:{{navborderWidth}}'></view>
+  </view>
+
+  <!-- <swiper bindchange="swiperChange" current="{{current}}" style='height:{{swiperheight}}rpx; margin-top:80rpx;'>
+    <block wx:for="{{4}}" wx:key="key">
+      <swiper-item>
+        <scroll-view scroll-y="true" scroll-with-animation="true" style='height:{{swiperheight}}rpx;'>
+          <i-divider content="加载已经完成,没有其他数据"></i-divider>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper> -->
+
+<!-- 旧 -->
+<view  class="Order">
+            <view class='orderList'  wx:for="{{list}}" wx:key="index">
+              <view class='orderList-top'>
+                <text class='t1'>订单完成时间：{{item.createTime}}</text>
+                <text class='t2'>
+                  <block wx:if="{{item.refundStatus==null}}">正常</block>
+                  <block wx:if="{{item.refundStatus==1}}">退款申请中</block>
+                  <block wx:if="{{item.refundStatus==2}}">退款成功</block> 
+                </text>
+              </view>
+              <!-- <view class='orderList-product-box'>
+                <view class="center"> 
+                        <view class="content">
+                          <view class="book_author text-cut">订单号：{{item.orderSn}}</view>
+                              <view class="book"> 
+                                     <view class="book_author text-cut" >
+                                    自提点：{{item.takeStoreName}}</view>
+                                    <view class="book_author text-cut">取货时间：{{item.takeTime}}</view>
+                                   
+                              </view>
+                        </view>
+                  </view>
+              </view> -->
+    <block >
+      <view class='product-box-product'>
+        <view>
+          <image src='{{item.goods.picUrl[0]}}' class='product-img'></image>
+        </view>
+        <view class='product-text'>
+          <view style='color:#3E3E3E;font-weight:600;'>{{item.goods.name}}</view>
+          <view>单价：￥{{item.goods.price}}  数量：×{{item.num}}</view>
+          <view>实付金额：<text style='color:#ED5F53;'>￥{{item.amount}}</text></view>
+        </view>
+      </view>
+    </block>
+
+
+
+              <view class='orderList-bottom'>
+                <view class='t1'>共{{item.num}}件商品 实付: <text class='price'>￥{{item.amount}}</text></view>      
+                          <view  wx:if="{{item.refundStatus==null}}"
+                          class="t2" catchtap="refund" 
+                          data-id="{{item.id}}">申请退货</view>
+              </view>
+            </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<view class="container" hidden="{{!appLoadingStatue}}" catchtouchmove='{{stopPageScroll}}'>
+    <i-spin fix></i-spin>
+</view>
+
+<i-message id="message" />
+
+<view class='container' wx:if="{{network500}}">
+  <network500 id="network-500" bindtap="connectfunc"></network500>
+</view>
