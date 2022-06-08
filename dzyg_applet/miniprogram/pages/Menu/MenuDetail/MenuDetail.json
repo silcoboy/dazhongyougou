@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index"
+  },
+  "navigationBarTitleText": "菜谱详情",
+  "backgroundColor": "#f1f1f1",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}

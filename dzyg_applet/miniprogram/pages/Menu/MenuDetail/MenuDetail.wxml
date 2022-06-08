@@ -1,0 +1,50 @@
+<swiper 	indicator-dots indicator-active-color="#ff0000" style='height:800rpx;width:100%;'>
+    <swiper-item  wx:for="{{picUrl}}" wx:key="index" style='height:800rpx;width:100%;'>
+      <image style='height:800rpx;width:100%;' src="{{item}}" bindtap="previewImage" data-index="{{index}}"></image>
+    </swiper-item>
+  </swiper>
+<view class="Menucontainer">
+<view class="title">{{info.title}}</view>
+<view class="describe">{{info.content}}
+</view>
+<!-- <view class="ingredients">
+食材：肉末、面条、黄瓜、葱蒜、小米辣
+</view>
+<view class="practice">
+做法：
+</view>
+<view class="technological">
+先把料汁调好以免手忙脚乱：碗中倒入两勺生抽+一勺老抽+一勺甜面酱+一勺豆瓣酱+少许糖+一勺淀粉，最后倒入一碗清水搅匀。
+起锅烧油倒入肉末炒出油，倒入葱蒜小米辣炒匀，倒入料汁小火煮至浓稠关火。锅中水开下面条、煮熟后捞入冷水中过一遍，捞出到碗中，
+浇上肉酱和黄瓜丝，搅匀开吃吧！
+</view> -->
+</view>
+
+<view class="createTime">
+编辑于{{info.createTime}}
+</view>
+
+<view class="comment">
+<view class="commentnum">共 {{list.length}} 条评论</view>
+<view class="usercomment" wx:for="{{list}}" wx:key="index">
+  <image class="avatarUrl" src="{{item.userAvatar}}"></image>
+  <view data-id="{{item.id}}" bindlongtap="deleteComment">
+    <view class="comment-item" >
+  <view class="name">{{item.userName}}</view>
+  <view class="commenttime">{{item.createTime}}</view>
+ </view>
+  <view  class="commentcontent">{{item.content}}</view>
+</view>
+</view>
+</view>
+
+
+<van-cell-group class="commentinput">
+  <van-field
+    left-icon='edit'
+    model:value="{{value}}"
+    placeholder="说点什么......"
+    bind:confirm="toComment"
+    clearable='true'
+  />
+</van-cell-group>

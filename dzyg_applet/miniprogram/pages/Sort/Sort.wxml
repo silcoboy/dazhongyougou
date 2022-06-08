@@ -1,0 +1,41 @@
+<view>
+  <view class="scroll-view-container">
+    <!-- 左侧的滚动视图区域 -->
+    <scroll-view class="left-scroll-view" scroll-y="true" style="{{wh}}">
+      <block wx:for="{{sortname}}" wx:key="index" >
+        <view class="left-scroll-view-item {{index == active ? 'active':''}}" bindtap="activeChanged" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+      </block>
+    </scroll-view>
+    <!-- 右侧的滚动视图区域 -->
+    <scroll-view class="right-scroll-view" scroll-y style="{{wh}}" scroll-top="{{scrollTop}}">
+      <view class="right-item">
+        <view class="right-view" >
+          <view class='product-minbox'>
+            <block wx:for="{{goodsList}}" wx:key="index">
+              <view class='product-box'  >
+                <view style='width:292rpx;' bindtap='goproductDetailfunc' data-id="{{item.id}}">
+                  <image src="{{item.picUrl[0]}}" class='product-img'></image>
+                </view>
+                <view class='product-jsbox'>
+                <view bindtap='goproductDetailfunc' data-id="{{item.id}}">
+                  <view class='product-name'>{{item.name}}</view>
+                  <view class='product-beife'>{{item.resume}}</view>
+                  <text class='product-num'>已售{{item.totalBuyNum}} / 还剩{{item.curNum}}件</text>
+                </view>
+                  <view class='price-box'>
+                    <view bindtap='goproductDetailfunc' data-id="{{item.id}}">
+                      <text class='t1'>￥{{item.price}}</text>
+                      <text class='t2'>￥{{item.oldPrice}}</text>
+                    </view>
+                    <image src='../../img/sort/index-shopping-car.png' class='index-shopping-car'bindtap="AddCart" data-id="{{item.id}}"></image>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

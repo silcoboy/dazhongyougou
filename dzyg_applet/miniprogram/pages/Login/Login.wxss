@@ -1,0 +1,81 @@
+page{
+  height: 100%;
+  background: #fff;
+  }
+.containers{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.backgoundimg{
+  position: absolute;
+  width: 100%;
+  height: 1207rpx;
+}
+.container-content{
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+} 
+.icon{
+width: 160rpx;
+height: 160rpx;
+border-radius: 35rpx;
+}
+.t1{
+  margin-top: 36rpx;
+  font-size: 36rpx;
+}
+.t2{
+ margin-top: 16rpx;
+ font-size: 28rpx;
+ color: #BBBBBB;
+}
+.loginbtn{
+  background-color: #01AE19; 
+   color: #fff;
+  /* background-color: #F7F7F7;
+  color:#BFBFBF; */
+  width: 94%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  margin-top: 140rpx;
+}
+.cancelbtn{
+  width: 94%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  color:#BFBFBF;
+  border: 1rpx solid #BFBFBF;
+  margin-top: 32rpx;
+}
+.choice-agreement{
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.choice{
+  margin-left: 20rpx;
+}
+.agree{
+  font-size: 24rpx;
+  color: #5A5A5A;
+  float: left;
+}
+.agreementtext{
+  color: #FF813A;
+}

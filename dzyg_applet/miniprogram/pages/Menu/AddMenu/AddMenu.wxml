@@ -1,0 +1,23 @@
+<view class="title-wrap">
+<textarea placeholder="请输入标题......" class="title-input" maxlength="1000" value="{{title}}" bindinput="getTitle"></textarea>
+</view>
+
+<view class="course-wrap">
+<textarea placeholder="请输入菜谱教程......" class="course-input" maxlength="2000" value="{{course}}" bindinput="getCourse"></textarea>
+</view>
+
+<view class="img-wrap" >
+<view class="one-img" wx:for="{{images}}" wx:key="index">
+<image src="{{item}}" class="img-choose" data-index="{{index}}" bindtap="previewImage"></image>
+<image src="../../../img/Menu/guanbi.png" class="close-img" bindtap="deleteImg" data-index="{{index}}"></image>
+</view>
+
+<view class="one-img">
+<image wx:if="{{images.length < maxCount}}" src="../../../img/Menu/Add.png" class="img-choose" bindtap="chooseImage"></image>
+</view>
+</view>
+<!-- <button class="releasebtn" >微信授权登录</button> -->
+<van-goods-action>
+  <van-goods-action-icon icon="send-gift-o" text="存草稿" bind:click="onClickIcon" />
+  <van-goods-action-button text="发布菜谱" bind:click="onClickButton" />
+</van-goods-action>
